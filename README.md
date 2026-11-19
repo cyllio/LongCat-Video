@@ -1,5 +1,7 @@
 # LongCat-Video
 
+**Para começar em português com GPU na nuvem:** [COMECE-AQUI.md](COMECE-AQUI.md).
+
 <div align="center">
   <img src="assets/longcat-video_logo.svg" width="45%" alt="LongCat-Video" />
 </div>
