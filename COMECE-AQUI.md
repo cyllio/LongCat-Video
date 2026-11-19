@@ -5,13 +5,13 @@ Seu fork: https://github.com/cyllio/LongCat-Video
 ## Começar gratuitamente, sem contratar GPU
 
 Para os primeiros testes, use a demonstração comunitária no navegador:
-https://huggingface.co/spaces/aiboostJP/LongCat-Video
+https://huggingface.co/spaces/sleepydoug1992/longcat-video
 
 1. Abra o link. Se a demonstração estiver em repouso, use a opção de despertar
    exibida pela página e aguarde. A disponibilidade depende do mantenedor.
 2. Entre com uma conta gratuita do Hugging Face se a página solicitar.
-3. Selecione `Text-to-Video`, descreva sua cena e comece com 480p, modo
-   `Distill` ativado e `Refine` desativado.
+3. Descreva sua cena, deixe a imagem vazia e comece com `320x576 (fastest)`,
+   `Frames: 21` e `Fast mode (distilled 16 steps)` ativado.
 4. Gere um vídeo curto e baixe o resultado quando estiver pronto.
 
 O serviço ZeroGPU tem fila e cota diária. A documentação consultada em
@@ -19,9 +19,15 @@ O serviço ZeroGPU tem fila e cota diária. A documentação consultada em
 de vídeos depende do tempo de processamento. Não é preciso contratar Runpod.
 Fonte: https://huggingface.co/docs/hub/spaces-zerogpu
 
-Na consulta inicial, essa demonstração estava em repouso; ainda não foi
-confirmada uma geração funcionando. Para vídeos de uma pessoa falando a partir
-de foto e áudio, esta alternativa estava ativa:
+Esse fluxo foi verificado com uma geração de dois lutadores de kung fu na praia
+ao entardecer: 21 quadros a 15 fps (1,4 segundo), 576 × 320, seed 42. A interface
+informou 30 segundos de geração. O MP4 foi salvo em `../outputs/` no computador
+local. A demonstração anterior de aiboostJP foi substituída por apresentar o erro
+`ZeroGPU illegal duration` no modo texto; o código do servidor de terceiros não
+foi alterado.
+
+Para vídeos de uma pessoa falando a partir de foto e áudio, esta alternativa
+estava ativa na consulta inicial:
 https://huggingface.co/spaces/victor/LongCat-Video-Avatar-1.5
 
 Essas demonstrações rodam no ambiente dos responsáveis pelos Spaces. Elas não
